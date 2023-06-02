@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabclientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnpesquisarcep = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
@@ -73,7 +74,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.txtnomepesquisar = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnpesquisarcep = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabclientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -158,6 +158,18 @@
             this.tabPage1.Text = "Dados Pessoais";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btnpesquisarcep
+            // 
+            this.btnpesquisarcep.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnpesquisarcep.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnpesquisarcep.Location = new System.Drawing.Point(750, 9);
+            this.btnpesquisarcep.Name = "btnpesquisarcep";
+            this.btnpesquisarcep.Size = new System.Drawing.Size(107, 31);
+            this.btnpesquisarcep.TabIndex = 33;
+            this.btnpesquisarcep.Text = "Pesquisar";
+            this.btnpesquisarcep.UseVisualStyleBackColor = false;
+            this.btnpesquisarcep.Click += new System.EventHandler(this.Pesquisar_Click_1);
             // 
             // btneditar
             // 
@@ -440,6 +452,7 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(297, 23);
             this.txtemail.TabIndex = 5;
+            this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
             // 
             // label4
             // 
@@ -593,18 +606,6 @@
             this.label16.Size = new System.Drawing.Size(61, 21);
             this.label16.TabIndex = 4;
             this.label16.Text = "Nome:";
-            // 
-            // btnpesquisarcep
-            // 
-            this.btnpesquisarcep.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnpesquisarcep.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnpesquisarcep.Location = new System.Drawing.Point(750, 9);
-            this.btnpesquisarcep.Name = "btnpesquisarcep";
-            this.btnpesquisarcep.Size = new System.Drawing.Size(107, 31);
-            this.btnpesquisarcep.TabIndex = 33;
-            this.btnpesquisarcep.Text = "Pesquisar";
-            this.btnpesquisarcep.UseVisualStyleBackColor = false;
-            this.btnpesquisarcep.Click += new System.EventHandler(this.Pesquisar_Click_1);
             // 
             // FrmClientes
             // 

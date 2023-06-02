@@ -219,10 +219,15 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
         private void btnnovo_Click(object sender, EventArgs e)
         {
-
+            new Helpers().LimparTela(this);
         }
 
         private void txtcep_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtemail_TextChanged(object sender, EventArgs e)
         {
 
         }

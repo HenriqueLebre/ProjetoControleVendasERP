@@ -23,6 +23,14 @@ namespace ProjetoControleVendas.br.com.projeto.model
                             {
                                 (ctr2 as TextBox).Text = string.Empty;
                             }
+                            if (ctr2 is MaskedTextBox)
+                            {
+                                (ctr2 as MaskedTextBox).Text = string.Empty;
+                            }
+                            if (ctr2 is ComboBox)
+                            {
+                                (ctr2 as ComboBox).Text = string.Empty;
+                            }
                         }
                     }
 
