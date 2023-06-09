@@ -526,9 +526,9 @@
             // 
             this.tabelacliente.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tabelacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelacliente.Location = new System.Drawing.Point(9, 72);
+            this.tabelacliente.Location = new System.Drawing.Point(9, 47);
             this.tabelacliente.Name = "tabelacliente";
-            this.tabelacliente.Size = new System.Drawing.Size(958, 215);
+            this.tabelacliente.Size = new System.Drawing.Size(958, 240);
             this.tabelacliente.TabIndex = 38;
             this.tabelacliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelacliente_CellClick);
             this.tabelacliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -537,7 +537,7 @@
             // 
             this.btnpesquisarCliente.BackColor = System.Drawing.Color.YellowGreen;
             this.btnpesquisarCliente.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnpesquisarCliente.Location = new System.Drawing.Point(383, 29);
+            this.btnpesquisarCliente.Location = new System.Drawing.Point(383, 9);
             this.btnpesquisarCliente.Name = "btnpesquisarCliente";
             this.btnpesquisarCliente.Size = new System.Drawing.Size(96, 32);
             this.btnpesquisarCliente.TabIndex = 37;
@@ -591,7 +591,7 @@
             // txtnomepesquisar
             // 
             this.txtnomepesquisar.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtnomepesquisar.Location = new System.Drawing.Point(71, 32);
+            this.txtnomepesquisar.Location = new System.Drawing.Point(71, 12);
             this.txtnomepesquisar.Name = "txtnomepesquisar";
             this.txtnomepesquisar.Size = new System.Drawing.Size(297, 27);
             this.txtnomepesquisar.TabIndex = 5;
@@ -601,7 +601,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label16.Location = new System.Drawing.Point(6, 35);
+            this.label16.Location = new System.Drawing.Point(6, 15);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(61, 21);
             this.label16.TabIndex = 4;

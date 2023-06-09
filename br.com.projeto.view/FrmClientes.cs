@@ -28,9 +28,9 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
             tabelacliente.DefaultCellStyle.ForeColor = Color.Black;
 
-            ClienteDAO dao = new ClienteDAO();
+            FuncionarioDAO dao = new FuncionarioDAO();
 
-            tabelacliente.DataSource = dao.ListarClientes();
+            tabelacliente.DataSource = dao.ListarFuncionario();
 
         }
 
@@ -202,8 +202,6 @@ namespace ProjetoControleVendas.br.com.projeto.view
                         txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
                         txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
                         cbuf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
-
-                        MessageBox.Show(txtendereco.Text, txtbairro.Text);
                     }
                     else
                     {
