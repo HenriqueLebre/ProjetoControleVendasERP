@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabfornecedor = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnpesquisarcep = new System.Windows.Forms.Button();
@@ -72,6 +71,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.txtnomepesquisar = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabfornecedor.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -90,17 +90,6 @@
             this.panel1.Size = new System.Drawing.Size(905, 442);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(45, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Fornecedores";
             // 
             // tabfornecedor
             // 
@@ -178,6 +167,7 @@
             this.btneditar.TabIndex = 32;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnexcluir
             // 
@@ -189,6 +179,7 @@
             this.btnexcluir.TabIndex = 31;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = false;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btnsalvar
             // 
@@ -497,6 +488,7 @@
             this.tabelafornecedor.Name = "tabelafornecedor";
             this.tabelafornecedor.Size = new System.Drawing.Size(886, 240);
             this.tabelafornecedor.TabIndex = 38;
+            this.tabelafornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelafornecedor_CellClick);
             this.tabelafornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelafornecedor_CellContentClick);
             // 
             // btnpesquisarCliente
@@ -561,6 +553,7 @@
             this.txtnomepesquisar.Name = "txtnomepesquisar";
             this.txtnomepesquisar.Size = new System.Drawing.Size(297, 27);
             this.txtnomepesquisar.TabIndex = 5;
+            this.txtnomepesquisar.TextChanged += new System.EventHandler(this.txtnomepesquisar_TextChanged);
             // 
             // label16
             // 
@@ -571,6 +564,17 @@
             this.label16.Size = new System.Drawing.Size(61, 21);
             this.label16.TabIndex = 4;
             this.label16.Text = "Nome:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(45, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(285, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cadastro de Fornecedores";
             // 
             // FrmFornecedores
             // 

@@ -153,6 +153,7 @@ namespace ProjetoControleVendas.br.com.projeto.view
             txtcidade.Text =        tabelacliente.CurrentRow.Cells[12].Value.ToString();
             cbuf.Text =             tabelacliente.CurrentRow.Cells[13].Value.ToString();
 
+
         }
 
         private void pesquisar_Click(object sender, EventArgs e)

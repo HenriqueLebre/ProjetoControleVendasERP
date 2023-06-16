@@ -95,6 +95,8 @@ namespace ProjetoControleVendas.br.com.projeto.view
             dao.CadastrarFornecedor(obj);
 
             tabelafornecedor.DataSource = dao.ListaFornecedores();
+
+            new Helpers().LimparTela(this);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -123,16 +125,89 @@ namespace ProjetoControleVendas.br.com.projeto.view
         // TALVEZ COM UMA GRANDE QUANTIDADE DE DADOS, A TELA DEMORE PARA CARREGAR A TELA
         private void btnpesquisarCliente_Click(object sender, EventArgs e)
         {
-            if (txtnomepesquisar.Text.Length == 0)
-            {
-                FornecedorDAO dao = new FornecedorDAO();
+            string nome = txtnomepesquisar.Text;
 
-                tabelafornecedor.DataSource = dao.ListaFornecedores();
-            }
-            else
+            FornecedorDAO dao = new FornecedorDAO();
+
+            tabelafornecedor.DataSource = dao.BuscaFornecedorNome(nome);
+
+            if (tabelafornecedor.Rows.Count == 0 || nome.Length == 0)
             {
-                return;
+                tabelafornecedor.DataSource = dao.ListaFornecedores();
+
             }
+
+        }
+
+        private void tabelafornecedor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtcodigo.Text =        tabelafornecedor.CurrentRow.Cells[0].Value.ToString();
+            txtnome.Text =          tabelafornecedor.CurrentRow.Cells[1].Value.ToString();
+            txtcnpj.Text =          tabelafornecedor.CurrentRow.Cells[2].Value.ToString();
+            txtemail.Text =         tabelafornecedor.CurrentRow.Cells[3].Value.ToString();
+            txttelefone.Text =      tabelafornecedor.CurrentRow.Cells[4].Value.ToString();
+            txtcelular.Text =       tabelafornecedor.CurrentRow.Cells[5].Value.ToString();
+            txtcep.Text =           tabelafornecedor.CurrentRow.Cells[6].Value.ToString();
+            txtendereco.Text =      tabelafornecedor.CurrentRow.Cells[7].Value.ToString();
+            txtnumero.Text =        tabelafornecedor.CurrentRow.Cells[8].Value.ToString();
+            txtcomplemento.Text =   tabelafornecedor.CurrentRow.Cells[9].Value.ToString();
+            txtbairro.Text =        tabelafornecedor.CurrentRow.Cells[10].Value.ToString();
+            txtcidade.Text =        tabelafornecedor.CurrentRow.Cells[11].Value.ToString();
+            cbuf.Text =             tabelafornecedor.CurrentRow.Cells[12].Value.ToString();
+
+            tabfornecedor.SelectedTab = tabPage1;
+
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            Fornecedor obj = new Fornecedor();
+
+            obj.nome = txtnome.Text;
+            obj.cnpj = txtcnpj.Text;
+            obj.email = txtemail.Text;
+            obj.celular = txtcelular.Text;
+            obj.telefone = txttelefone.Text;
+            obj.endereco = txtendereco.Text;
+            obj.numero = int.Parse(txtnumero.Text);
+            obj.bairro = txtbairro.Text;
+            obj.cidade = txtcidade.Text;
+            obj.estado = cbuf.Text;
+            obj.cep = txtcep.Text;
+            obj.complemento = txtcomplemento.Text;
+
+            obj.codigo = int.Parse(txtcodigo.Text);
+
+            FornecedorDAO dao = new FornecedorDAO();
+
+            dao.AlterarFornecedor(obj);
+
+            tabelafornecedor.DataSource = dao.ListaFornecedores();
+
+            new Helpers().LimparTela(this);
+        }
+
+        private void btnexcluir_Click(object sender, EventArgs e)
+        {
+            Fornecedor obj = new Fornecedor();
+
+            obj.codigo = int.Parse(txtcodigo.Text);
+
+            FornecedorDAO dao = new FornecedorDAO();
+
+            dao.Excluirfornecedor(obj);
+
+            tabelafornecedor.DataSource = dao.ListaFornecedores();
+
+            new Helpers().LimparTela(this);
+        }
+
+        private void txtnomepesquisar_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtnomepesquisar.Text + "%";
+
+            FornecedorDAO dao = new FornecedorDAO();
+            tabelafornecedor.DataSource = dao.BuscaFornecedorNome(nome);
         }
     }
 }
