@@ -1,4 +1,5 @@
 ﻿using ProjetoControleVendas.br.com.projeto.dao;
+using ProjetoControleVendas.br.com.projeto.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,23 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            Produto obj = new Produto();
+
+            obj.descricao = txtdesc.Text;
+            obj.preco = decimal.Parse(txtcodigo.Text);
+            obj.qtdEstoque = int.Parse(txtqtd.Text);
+            obj.for_id = int.Parse(cbfornecedor.SelectedValue.ToString());
+
+            ProdutoDAO dao = new ProdutoDAO();
+
+            dao.CadastrarProduto(obj);
+
+            new Helpers().LimparTela(this);
 
         }
     }

@@ -32,6 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabprodutos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbfornecedor = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtqtd = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textpreco = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
@@ -50,12 +56,6 @@
             this.txtnomepesquisar = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textpreco = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textqtd = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbfornecedor = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabprodutos.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -100,7 +100,7 @@
             // 
             this.tabPage1.Controls.Add(this.cbfornecedor);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.textqtd);
+            this.tabPage1.Controls.Add(this.txtqtd);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.textpreco);
             this.tabPage1.Controls.Add(this.label5);
@@ -121,6 +121,60 @@
             this.tabPage1.Text = "Dados Pessoais";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // cbfornecedor
+            // 
+            this.cbfornecedor.FormattingEnabled = true;
+            this.cbfornecedor.Location = new System.Drawing.Point(111, 147);
+            this.cbfornecedor.Name = "cbfornecedor";
+            this.cbfornecedor.Size = new System.Drawing.Size(297, 25);
+            this.cbfornecedor.TabIndex = 38;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label8.Location = new System.Drawing.Point(19, 151);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 17);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Fornecedor:";
+            // 
+            // txtqtd
+            // 
+            this.txtqtd.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtqtd.Location = new System.Drawing.Point(111, 105);
+            this.txtqtd.Name = "txtqtd";
+            this.txtqtd.Size = new System.Drawing.Size(135, 23);
+            this.txtqtd.TabIndex = 36;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(4, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 17);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "QTDE Estoque:";
+            // 
+            // textpreco
+            // 
+            this.textpreco.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textpreco.Location = new System.Drawing.Point(111, 74);
+            this.textpreco.Name = "textpreco";
+            this.textpreco.Size = new System.Drawing.Size(135, 23);
+            this.textpreco.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(27, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 17);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Preço (R$):";
             // 
             // btneditar
             // 
@@ -153,6 +207,7 @@
             this.btnsalvar.TabIndex = 30;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.UseVisualStyleBackColor = false;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // btnnovo
             // 
@@ -312,60 +367,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Cadastro de Produtos";
             // 
-            // textpreco
-            // 
-            this.textpreco.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textpreco.Location = new System.Drawing.Point(111, 74);
-            this.textpreco.Name = "textpreco";
-            this.textpreco.Size = new System.Drawing.Size(135, 23);
-            this.textpreco.TabIndex = 34;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(27, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 17);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Preço (R$):";
-            // 
-            // textqtd
-            // 
-            this.textqtd.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textqtd.Location = new System.Drawing.Point(111, 105);
-            this.textqtd.Name = "textqtd";
-            this.textqtd.Size = new System.Drawing.Size(135, 23);
-            this.textqtd.TabIndex = 36;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(4, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 17);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "QTDE Estoque:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(19, 151);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 17);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Fornecedor:";
-            // 
-            // cbfornecedor
-            // 
-            this.cbfornecedor.FormattingEnabled = true;
-            this.cbfornecedor.Location = new System.Drawing.Point(111, 147);
-            this.cbfornecedor.Name = "cbfornecedor";
-            this.cbfornecedor.Size = new System.Drawing.Size(297, 25);
-            this.cbfornecedor.TabIndex = 38;
-            // 
             // FrmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,7 +415,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbfornecedor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textqtd;
+        private System.Windows.Forms.TextBox txtqtd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textpreco;
         private System.Windows.Forms.Label label5;
