@@ -17,7 +17,7 @@ namespace ProjetoControleVendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmFornecedores());
+            Application.Run(new FrmProdutos());
         }
     }
 }
