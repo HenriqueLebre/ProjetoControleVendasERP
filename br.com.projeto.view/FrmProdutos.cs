@@ -28,6 +28,9 @@ namespace ProjetoControleVendas.br.com.projeto.view
             cbfornecedor.DisplayMember = "nome";
             cbfornecedor.ValueMember = "id";
 
+            ProdutoDAO dao = new ProdutoDAO();
+            tabelaproduto.DataSource = dao.ListarProdutos();
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -46,7 +49,7 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
             obj.descricao = txtdesc.Text;
             obj.preco = decimal.Parse(txtcodigo.Text);
-            obj.qtdEstoque = int.Parse(txtqtd.Text);
+            obj.qtd_estoque = int.Parse(txtqtd.Text);
             obj.for_id = int.Parse(cbfornecedor.SelectedValue.ToString());
 
             ProdutoDAO dao = new ProdutoDAO();
@@ -54,6 +57,23 @@ namespace ProjetoControleVendas.br.com.projeto.view
             dao.CadastrarProduto(obj);
 
             new Helpers().LimparTela(this);
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabelaproduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtcodigo.Text = tabelaproduto.CurrentRow.Cells[0].Value.ToString();
+            txtdesc.Text = tabelaproduto.CurrentRow.Cells[1].Value.ToString();
+            txtpreco.Text = tabelaproduto.CurrentRow.Cells[2].Value.ToString();
+            txtqtd.Text = tabelaproduto.CurrentRow.Cells[3].Value.ToString();
+            cbfornecedor.Text = tabelaproduto.CurrentRow.Cells[4].Value.ToString();
+
+            tabprodutos.SelectedTab = tabPage1;
 
         }
     }

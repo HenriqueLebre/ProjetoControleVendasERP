@@ -36,7 +36,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtqtd = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textpreco = new System.Windows.Forms.TextBox();
+            this.txtpreco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
@@ -102,7 +102,7 @@
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txtqtd);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textpreco);
+            this.tabPage1.Controls.Add(this.txtpreco);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.btneditar);
             this.tabPage1.Controls.Add(this.btnexcluir);
@@ -158,13 +158,13 @@
             this.label7.TabIndex = 35;
             this.label7.Text = "QTDE Estoque:";
             // 
-            // textpreco
+            // txtpreco
             // 
-            this.textpreco.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textpreco.Location = new System.Drawing.Point(111, 74);
-            this.textpreco.Name = "textpreco";
-            this.textpreco.Size = new System.Drawing.Size(135, 23);
-            this.textpreco.TabIndex = 34;
+            this.txtpreco.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtpreco.Location = new System.Drawing.Point(111, 74);
+            this.txtpreco.Name = "txtpreco";
+            this.txtpreco.Size = new System.Drawing.Size(135, 23);
+            this.txtpreco.TabIndex = 34;
             // 
             // label5
             // 
@@ -274,6 +274,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // tabelaproduto
             // 
@@ -283,6 +284,7 @@
             this.tabelaproduto.Name = "tabelaproduto";
             this.tabelaproduto.Size = new System.Drawing.Size(476, 210);
             this.tabelaproduto.TabIndex = 38;
+            this.tabelaproduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaproduto_CellClick);
             // 
             // btnpesquisarCliente
             // 
@@ -417,7 +419,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtqtd;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textpreco;
+        private System.Windows.Forms.TextBox txtpreco;
         private System.Windows.Forms.Label label5;
     }
 }
