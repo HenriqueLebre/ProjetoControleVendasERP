@@ -186,6 +186,7 @@
             this.btneditar.TabIndex = 32;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnexcluir
             // 
@@ -197,6 +198,7 @@
             this.btnexcluir.TabIndex = 31;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = false;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btnsalvar
             // 
@@ -296,6 +298,7 @@
             this.btnpesquisarCliente.TabIndex = 37;
             this.btnpesquisarCliente.Text = "Pesquisar";
             this.btnpesquisarCliente.UseVisualStyleBackColor = false;
+            this.btnpesquisarCliente.Click += new System.EventHandler(this.btnpesquisarCliente_Click);
             // 
             // button5
             // 
@@ -347,6 +350,7 @@
             this.txtnomepesquisar.Name = "txtnomepesquisar";
             this.txtnomepesquisar.Size = new System.Drawing.Size(297, 27);
             this.txtnomepesquisar.TabIndex = 5;
+            this.txtnomepesquisar.TextChanged += new System.EventHandler(this.txtnomepesquisar_TextChanged);
             // 
             // label16
             // 

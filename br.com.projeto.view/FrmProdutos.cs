@@ -58,6 +58,9 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
             new Helpers().LimparTela(this);
 
+            tabelaproduto.DataSource = dao.ListarProdutos();
+
+
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -75,6 +78,60 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
             tabprodutos.SelectedTab = tabPage1;
 
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            Produto obj = new Produto();
+
+            obj.descricao = txtdesc.Text;
+            obj.preco = decimal.Parse(txtcodigo.Text);
+            obj.qtd_estoque = int.Parse(txtqtd.Text);
+            obj.for_id = int.Parse(cbfornecedor.SelectedValue.ToString());
+            obj.id = int.Parse(txtcodigo.Text);
+
+
+            ProdutoDAO dao = new ProdutoDAO();
+
+            dao.AlterarProduto(obj);
+
+            new Helpers().LimparTela(this);
+
+            tabelaproduto.DataSource = dao.ListarProdutos();
+        }
+
+        private void btnexcluir_Click(object sender, EventArgs e)
+        {
+            Produto obj = new Produto();
+
+            obj.id = int.Parse(txtcodigo.Text);
+
+
+            ProdutoDAO dao = new ProdutoDAO();
+
+            dao.ExcluirProduto(obj);
+
+            new Helpers().LimparTela(this);
+
+            tabelaproduto.DataSource = dao.ListarProdutos();
+        }
+
+        private void txtnomepesquisar_TextChanged(object sender, EventArgs e)
+        {
+            string descricao = "%" + txtnomepesquisar.Text + "%";
+
+            ProdutoDAO dao = new ProdutoDAO();
+
+            tabelaproduto.DataSource = dao.BuscaProdutoNomeAprx(descricao);
+        }
+
+        private void btnpesquisarCliente_Click(object sender, EventArgs e)
+        {
+            string descricao = txtnomepesquisar.Text;
+
+            ProdutoDAO dao = new ProdutoDAO();
+
+            tabelaproduto.DataSource = dao.BuscaProdutoNome(descricao);
         }
     }
 }
