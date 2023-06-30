@@ -252,5 +252,49 @@ namespace ProjetoControleVendas.br.com.projeto.dao
         }
 
         #endregion
+
+        #region RetornaClientePorCpf
+
+        public Cliente RetornaClientePorCpf( string cpf )
+        {
+            try
+            {
+                Cliente obj = new Cliente();
+
+                string cCmdSql = @"SELECT * FROM tb_clientes WHERE cpf = @cpf";
+
+                MySqlCommand execcmd = new MySqlCommand(cCmdSql, conn);
+                execcmd.Parameters.AddWithValue("@cpf", cpf);
+
+                conn.Open();
+                MySqlDataReader rs = execcmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    obj.codigo  = rs.GetInt32("id");
+                    obj.nome    = rs.GetString("nome");
+                    obj.cep     = rs.GetString("cep");
+                    obj.cidade  = rs.GetString("cidade");
+                    obj.estado  = rs.GetString("uf");
+                }
+
+                conn.Close();
+
+                return obj;
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Ocorreu um erro na busca pelo cliente, valide as informações. Caso persista " +
+                    "contate o suporte.");
+
+                return null;
+            }
+        }
+
+        #endregion
+
     }
 }
