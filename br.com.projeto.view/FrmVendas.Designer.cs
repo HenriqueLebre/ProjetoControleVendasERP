@@ -31,33 +31,33 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtcidade = new System.Windows.Forms.TextBox();
+            this.cbuf = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtcep = new System.Windows.Forms.MaskedTextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtcep = new System.Windows.Forms.MaskedTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbuf = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtcidade = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnrmvitem = new System.Windows.Forms.Button();
+            this.btnadditem = new System.Windows.Forms.Button();
             this.txtqtd = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.txtpreco = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtdesc = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnadditem = new System.Windows.Forms.Button();
-            this.btnrmvitem = new System.Windows.Forms.Button();
             this.Produtos = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.qtdeitens = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.total = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.qtdeitens = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnpgto = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -109,80 +109,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
             // 
-            // groupBox2
+            // txtcidade
             // 
-            this.groupBox2.Controls.Add(this.btnrmvitem);
-            this.groupBox2.Controls.Add(this.btnadditem);
-            this.groupBox2.Controls.Add(this.txtqtd);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtcodigo);
-            this.groupBox2.Controls.Add(this.txtpreco);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtdesc);
-            this.groupBox2.Location = new System.Drawing.Point(13, 314);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(374, 141);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Produtos";
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtcpf.Location = new System.Drawing.Point(70, 13);
-            this.txtcpf.Mask = "###,###,###-##";
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(107, 20);
-            this.txtcpf.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(27, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "CPF:";
-            // 
-            // txtnome
-            // 
-            this.txtnome.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtnome.Location = new System.Drawing.Point(70, 39);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(297, 20);
-            this.txtnome.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(19, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Nome:";
-            // 
-            // txtcep
-            // 
-            this.txtcep.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtcep.Location = new System.Drawing.Point(71, 69);
-            this.txtcep.Mask = "##-###-###";
-            this.txtcep.Name = "txtcep";
-            this.txtcep.Size = new System.Drawing.Size(107, 20);
-            this.txtcep.TabIndex = 35;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label9.Location = new System.Drawing.Point(26, 74);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "CEP:";
+            this.txtcidade.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtcidade.Location = new System.Drawing.Point(71, 96);
+            this.txtcidade.Name = "txtcidade";
+            this.txtcidade.Size = new System.Drawing.Size(177, 20);
+            this.txtcidade.TabIndex = 30;
             // 
             // cbuf
             // 
@@ -208,24 +141,6 @@
             this.cbuf.Size = new System.Drawing.Size(71, 21);
             this.cbuf.TabIndex = 32;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label15.Location = new System.Drawing.Point(207, 74);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(24, 13);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "UF:";
-            // 
-            // txtcidade
-            // 
-            this.txtcidade.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtcidade.Location = new System.Drawing.Point(71, 96);
-            this.txtcidade.Name = "txtcidade";
-            this.txtcidade.Size = new System.Drawing.Size(177, 20);
-            this.txtcidade.TabIndex = 30;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -236,6 +151,116 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "Cidade:";
             // 
+            // txtcep
+            // 
+            this.txtcep.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtcep.Location = new System.Drawing.Point(71, 69);
+            this.txtcep.Mask = "##-###-###";
+            this.txtcep.Name = "txtcep";
+            this.txtcep.Size = new System.Drawing.Size(107, 20);
+            this.txtcep.TabIndex = 35;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label15.Location = new System.Drawing.Point(207, 74);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(24, 13);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "UF:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label9.Location = new System.Drawing.Point(26, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "CEP:";
+            // 
+            // txtnome
+            // 
+            this.txtnome.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtnome.Location = new System.Drawing.Point(70, 39);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(297, 20);
+            this.txtnome.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(19, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Nome:";
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtcpf.Location = new System.Drawing.Point(70, 13);
+            this.txtcpf.Mask = "###,###,###-##";
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(107, 20);
+            this.txtcpf.TabIndex = 12;
+            this.txtcpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcpf_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label6.Location = new System.Drawing.Point(27, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "CPF:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnrmvitem);
+            this.groupBox2.Controls.Add(this.btnadditem);
+            this.groupBox2.Controls.Add(this.txtqtd);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtcodigo);
+            this.groupBox2.Controls.Add(this.txtpreco);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtdesc);
+            this.groupBox2.Location = new System.Drawing.Point(13, 314);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(374, 141);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Produtos";
+            // 
+            // btnrmvitem
+            // 
+            this.btnrmvitem.BackColor = System.Drawing.Color.DarkGray;
+            this.btnrmvitem.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnrmvitem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnrmvitem.Location = new System.Drawing.Point(244, 111);
+            this.btnrmvitem.Name = "btnrmvitem";
+            this.btnrmvitem.Size = new System.Drawing.Size(124, 30);
+            this.btnrmvitem.TabIndex = 32;
+            this.btnrmvitem.Text = "Remover Item";
+            this.btnrmvitem.UseVisualStyleBackColor = false;
+            // 
+            // btnadditem
+            // 
+            this.btnadditem.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnadditem.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnadditem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnadditem.Location = new System.Drawing.Point(244, 79);
+            this.btnadditem.Name = "btnadditem";
+            this.btnadditem.Size = new System.Drawing.Size(124, 30);
+            this.btnadditem.TabIndex = 30;
+            this.btnadditem.Text = "Adcionar Item";
+            this.btnadditem.UseVisualStyleBackColor = false;
+            // 
             // txtqtd
             // 
             this.txtqtd.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -243,6 +268,16 @@
             this.txtqtd.Name = "txtqtd";
             this.txtqtd.Size = new System.Drawing.Size(135, 20);
             this.txtqtd.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(20, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Código:";
             // 
             // label7
             // 
@@ -254,6 +289,14 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "Qtde:";
             // 
+            // txtcodigo
+            // 
+            this.txtcodigo.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtcodigo.Location = new System.Drawing.Point(71, 22);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(86, 20);
+            this.txtcodigo.TabIndex = 38;
+            // 
             // txtpreco
             // 
             this.txtpreco.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -261,6 +304,16 @@
             this.txtpreco.Name = "txtpreco";
             this.txtpreco.Size = new System.Drawing.Size(135, 20);
             this.txtpreco.TabIndex = 42;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(5, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Descrição:";
             // 
             // label5
             // 
@@ -279,58 +332,6 @@
             this.txtdesc.Name = "txtdesc";
             this.txtdesc.Size = new System.Drawing.Size(297, 20);
             this.txtdesc.TabIndex = 40;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(5, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Descrição:";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtcodigo.Location = new System.Drawing.Point(71, 22);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(86, 20);
-            this.txtcodigo.TabIndex = 38;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(20, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Código:";
-            // 
-            // btnadditem
-            // 
-            this.btnadditem.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnadditem.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnadditem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btnadditem.Location = new System.Drawing.Point(244, 79);
-            this.btnadditem.Name = "btnadditem";
-            this.btnadditem.Size = new System.Drawing.Size(124, 30);
-            this.btnadditem.TabIndex = 30;
-            this.btnadditem.Text = "Adcionar Item";
-            this.btnadditem.UseVisualStyleBackColor = false;
-            // 
-            // btnrmvitem
-            // 
-            this.btnrmvitem.BackColor = System.Drawing.Color.DarkGray;
-            this.btnrmvitem.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnrmvitem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btnrmvitem.Location = new System.Drawing.Point(244, 111);
-            this.btnrmvitem.Name = "btnrmvitem";
-            this.btnrmvitem.Size = new System.Drawing.Size(124, 30);
-            this.btnrmvitem.TabIndex = 32;
-            this.btnrmvitem.Text = "Remover Item";
-            this.btnrmvitem.UseVisualStyleBackColor = false;
             // 
             // Produtos
             // 
@@ -353,24 +354,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Totais";
             // 
-            // qtdeitens
-            // 
-            this.qtdeitens.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.qtdeitens.Location = new System.Drawing.Point(84, 39);
-            this.qtdeitens.Name = "qtdeitens";
-            this.qtdeitens.Size = new System.Drawing.Size(143, 20);
-            this.qtdeitens.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label13.Location = new System.Drawing.Point(19, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Qtde Itens:";
-            // 
             // total
             // 
             this.total.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -388,6 +371,24 @@
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "Total (R$):";
+            // 
+            // qtdeitens
+            // 
+            this.qtdeitens.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.qtdeitens.Location = new System.Drawing.Point(84, 39);
+            this.qtdeitens.Name = "qtdeitens";
+            this.qtdeitens.Size = new System.Drawing.Size(143, 20);
+            this.qtdeitens.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label13.Location = new System.Drawing.Point(19, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Qtde Itens:";
             // 
             // btncancelar
             // 

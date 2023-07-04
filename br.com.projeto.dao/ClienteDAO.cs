@@ -259,7 +259,6 @@ namespace ProjetoControleVendas.br.com.projeto.dao
         {
             try
             {
-                Cliente obj = new Cliente();
 
                 string cCmdSql = @"SELECT * FROM tb_clientes WHERE cpf = @cpf";
 
@@ -271,17 +270,19 @@ namespace ProjetoControleVendas.br.com.projeto.dao
 
                 if (rs.Read())
                 {
+                    Cliente obj = new Cliente();
+
                     obj.codigo  = rs.GetInt32("id");
                     obj.nome    = rs.GetString("nome");
                     obj.cep     = rs.GetString("cep");
                     obj.cidade  = rs.GetString("cidade");
                     obj.estado  = rs.GetString("uf");
+    
+                    return obj;
+                
                 }
 
-                conn.Close();
-
-                return obj;
-
+                return null;
 
             }
             catch (Exception erro)
