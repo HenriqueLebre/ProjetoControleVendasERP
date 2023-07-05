@@ -296,6 +296,7 @@
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(86, 20);
             this.txtcodigo.TabIndex = 38;
+            this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
             // 
             // txtpreco
             // 
@@ -335,10 +336,13 @@
             // 
             // Produtos
             // 
+            this.Produtos.AllowUserToAddRows = false;
+            this.Produtos.AllowUserToDeleteRows = false;
             this.Produtos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Produtos.Location = new System.Drawing.Point(424, 166);
+            this.Produtos.Location = new System.Drawing.Point(393, 166);
             this.Produtos.Name = "Produtos";
-            this.Produtos.Size = new System.Drawing.Size(374, 289);
+            this.Produtos.ReadOnly = true;
+            this.Produtos.Size = new System.Drawing.Size(405, 289);
             this.Produtos.TabIndex = 5;
             // 
             // groupBox3
@@ -347,9 +351,9 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.qtdeitens);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(424, 461);
+            this.groupBox3.Location = new System.Drawing.Point(393, 461);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(374, 62);
+            this.groupBox3.Size = new System.Drawing.Size(405, 62);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Totais";
@@ -449,6 +453,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmVendas";
             this.Text = "Vendas";
+            this.Load += new System.EventHandler(this.FrmVendas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

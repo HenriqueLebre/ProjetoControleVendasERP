@@ -18,9 +18,27 @@ namespace ProjetoControleVendas.br.com.projeto.view
         Cliente cliente = new Cliente();
         ClienteDAO cDAO = new ClienteDAO();
 
+        Produto p = new Produto();
+        ProdutoDAO pdao = new ProdutoDAO();
+
+        int qtd;
+        decimal preco;
+        decimal subtotal, totalDeCompras;
+
+        DataTable carrinho = new DataTable();
+
         public FrmVendas()
         {
             InitializeComponent();
+
+            carrinho.Columns.Add("Codigo",      typeof(int));
+            carrinho.Columns.Add("Produto",     typeof(string));
+            carrinho.Columns.Add("Qtd",         typeof(int));
+            carrinho.Columns.Add("Preço",       typeof(decimal));
+            carrinho.Columns.Add("Subtotal",    typeof(decimal));
+
+            Produtos.DataSource = carrinho;
+
         }
 
         private void txtcpf_KeyPress(object sender, KeyPressEventArgs e)
@@ -35,6 +53,26 @@ namespace ProjetoControleVendas.br.com.projeto.view
                 cbuf.Text = cliente.estado;
 
             }
+        }
+
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                p = pdao.RetornaProdutoPorCod(int.Parse(txtcodigo.Text));
+
+                txtdesc.Text = p.descricao;
+                txtpreco.Text = p.preco.ToString();
+                txtqtd.Text = p.qtd_estoque.ToString();
+
+            }
+        }
+
+        private void FrmVendas_Load(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }
