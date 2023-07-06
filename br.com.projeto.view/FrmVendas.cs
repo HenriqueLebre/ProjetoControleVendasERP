@@ -68,6 +68,48 @@ namespace ProjetoControleVendas.br.com.projeto.view
             }
         }
 
+        private void btnadditem_Click(object sender, EventArgs e)
+        {
+            qtd = int.Parse(txtqtd.Text);
+            preco = decimal.Parse(txtpreco.Text);
+
+            subtotal = qtd * preco;
+
+            totalDeCompras += subtotal;
+
+            carrinho.Rows.Add(int.Parse(txtcodigo.Text), txtdesc.Text, qtd, preco, subtotal);
+
+            total.Text = totalDeCompras.ToString();
+
+            qtdeitens.Text += qtd;
+
+            txtcodigo.Clear();
+            txtdesc.Clear();
+            txtqtd.Clear();
+            txtpreco.Clear();
+
+            txtcodigo.Focus();
+        }
+
+        private void btnrmvitem_Click(object sender, EventArgs e)
+        {
+
+            decimal subproduto = decimal.Parse(Produtos.CurrentRow.Cells[4].Value.ToString());
+
+            int indice = Produtos.CurrentRow.Index;
+
+            DataRow linha = carrinho.Rows[indice];
+
+            carrinho.Rows.Remove(linha);
+
+            carrinho.AcceptChanges();
+
+            totalDeCompras -= subproduto;
+
+            total.Text = totalDeCompras.ToString();
+
+        }
+
         private void FrmVendas_Load(object sender, EventArgs e)
         {
 

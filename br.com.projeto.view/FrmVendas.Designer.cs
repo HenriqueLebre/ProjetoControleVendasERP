@@ -248,6 +248,7 @@
             this.btnrmvitem.TabIndex = 32;
             this.btnrmvitem.Text = "Remover Item";
             this.btnrmvitem.UseVisualStyleBackColor = false;
+            this.btnrmvitem.Click += new System.EventHandler(this.btnrmvitem_Click);
             // 
             // btnadditem
             // 
@@ -260,6 +261,7 @@
             this.btnadditem.TabIndex = 30;
             this.btnadditem.Text = "Adcionar Item";
             this.btnadditem.UseVisualStyleBackColor = false;
+            this.btnadditem.Click += new System.EventHandler(this.btnadditem_Click);
             // 
             // txtqtd
             // 
@@ -342,7 +344,7 @@
             this.Produtos.Location = new System.Drawing.Point(393, 166);
             this.Produtos.Name = "Produtos";
             this.Produtos.ReadOnly = true;
-            this.Produtos.Size = new System.Drawing.Size(405, 289);
+            this.Produtos.Size = new System.Drawing.Size(416, 289);
             this.Produtos.TabIndex = 5;
             // 
             // groupBox3
@@ -353,7 +355,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Location = new System.Drawing.Point(393, 461);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(405, 62);
+            this.groupBox3.Size = new System.Drawing.Size(416, 62);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Totais";

@@ -285,6 +285,8 @@ namespace ProjetoControleVendas.br.com.projeto.dao
                     p.descricao  = rs.GetString("descricao");
                     p.preco      = rs.GetDecimal("preco");
 
+                    conn.Close();
+
                 return p;
                 }
 

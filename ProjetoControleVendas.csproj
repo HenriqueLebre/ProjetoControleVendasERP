@@ -116,6 +116,12 @@
     <Compile Include="br.com.projeto.view\FrmFuncionarios.Designer.cs">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.projeto.view\FrmPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmPagamentos.Designer.cs">
+      <DependentUpon>FrmPagamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.view\FrmProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.view\FrmPagamentos.resx">
+      <DependentUpon>FrmPagamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmProdutos.resx">
       <DependentUpon>FrmProdutos.cs</DependentUpon>
