@@ -419,6 +419,7 @@
             this.btnpgto.TabIndex = 37;
             this.btnpgto.Text = "Pagamento";
             this.btnpgto.UseVisualStyleBackColor = false;
+            this.btnpgto.Click += new System.EventHandler(this.btnpgto_Click);
             // 
             // textBox1
             // 

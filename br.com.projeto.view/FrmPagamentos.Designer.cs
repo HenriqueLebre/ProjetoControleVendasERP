@@ -34,9 +34,9 @@
             this.txtdinheiro = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtcartao = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textpix = new System.Windows.Forms.TextBox();
             this.txtpix = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.texttotal = new System.Windows.Forms.TextBox();
             this.txttotal = new System.Windows.Forms.Label();
             this.btnfinalizar = new System.Windows.Forms.Button();
             this.txttroco = new System.Windows.Forms.TextBox();
@@ -101,13 +101,13 @@
             this.txtcartao.TabIndex = 45;
             this.txtcartao.Text = "Cartão (R$):";
             // 
-            // textBox2
+            // textpix
             // 
-            this.textBox2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox2.Location = new System.Drawing.Point(115, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 48;
+            this.textpix.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textpix.Location = new System.Drawing.Point(115, 251);
+            this.textpix.Name = "textpix";
+            this.textpix.Size = new System.Drawing.Size(135, 20);
+            this.textpix.TabIndex = 48;
             // 
             // txtpix
             // 
@@ -119,14 +119,14 @@
             this.txtpix.TabIndex = 47;
             this.txtpix.Text = "Pix (R$):";
             // 
-            // textBox3
+            // texttotal
             // 
-            this.textBox3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox3.Location = new System.Drawing.Point(115, 343);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(135, 20);
-            this.textBox3.TabIndex = 50;
+            this.texttotal.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.texttotal.Location = new System.Drawing.Point(115, 343);
+            this.texttotal.Name = "texttotal";
+            this.texttotal.ReadOnly = true;
+            this.texttotal.Size = new System.Drawing.Size(135, 20);
+            this.texttotal.TabIndex = 50;
             // 
             // txttotal
             // 
@@ -149,6 +149,7 @@
             this.btnfinalizar.TabIndex = 51;
             this.btnfinalizar.Text = "Finalizar Pagamento";
             this.btnfinalizar.UseVisualStyleBackColor = false;
+            this.btnfinalizar.Click += new System.EventHandler(this.btnfinalizar_Click);
             // 
             // txttroco
             // 
@@ -177,9 +178,9 @@
             this.Controls.Add(this.txttroco);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnfinalizar);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.texttotal);
             this.Controls.Add(this.txttotal);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textpix);
             this.Controls.Add(this.txtpix);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtcartao);
@@ -203,12 +204,12 @@
         private System.Windows.Forms.Label txtdinheiro;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txtcartao;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textpix;
         private System.Windows.Forms.Label txtpix;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label txttotal;
         private System.Windows.Forms.Button btnfinalizar;
         private System.Windows.Forms.TextBox txttroco;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox texttotal;
     }
 }
