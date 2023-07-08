@@ -55,5 +55,46 @@ namespace ProjetoControleVendas.br.com.projeto.dao
 
         #endregion
 
+        #region RetornaIdUltVenda
+
+        public int RetornaIdUltVenda()
+        {
+            try
+            {
+                int idvenda = 0;
+                string cCmdSql = "SELECT max(id) id from vendas;";
+                MySqlCommand execcmd = new MySqlCommand(@cCmdSql,conn);
+
+                conn.Open();
+
+                MySqlDataReader rs = execcmd.ExecuteReader();
+
+                if (rs.Read()) 
+                {
+                    idvenda = rs.GetInt32("id");
+                    
+
+                }
+
+                conn.Close();
+                return idvenda;
+
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Não foi possível identificar a última venda, analise as informações: " + erro);
+                return 0;
+            }
+        }
+
+        #endregion
+
+
+        #region 
+
+        #endregion
     }
 }

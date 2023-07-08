@@ -30,9 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtpreco = new System.Windows.Forms.TextBox();
+            this.textdinheiro = new System.Windows.Forms.TextBox();
             this.txtdinheiro = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textCartao = new System.Windows.Forms.TextBox();
             this.txtcartao = new System.Windows.Forms.Label();
             this.textpix = new System.Windows.Forms.TextBox();
             this.txtpix = new System.Windows.Forms.Label();
@@ -41,7 +41,10 @@
             this.btnfinalizar = new System.Windows.Forms.Button();
             this.txttroco = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Obs = new System.Windows.Forms.GroupBox();
+            this.txtobs = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.Obs.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,13 +68,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Pagamento";
             // 
-            // txtpreco
+            // textdinheiro
             // 
-            this.txtpreco.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtpreco.Location = new System.Drawing.Point(115, 170);
-            this.txtpreco.Name = "txtpreco";
-            this.txtpreco.Size = new System.Drawing.Size(135, 20);
-            this.txtpreco.TabIndex = 44;
+            this.textdinheiro.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textdinheiro.Location = new System.Drawing.Point(115, 170);
+            this.textdinheiro.Name = "textdinheiro";
+            this.textdinheiro.Size = new System.Drawing.Size(135, 20);
+            this.textdinheiro.TabIndex = 44;
             // 
             // txtdinheiro
             // 
@@ -83,13 +86,13 @@
             this.txtdinheiro.TabIndex = 43;
             this.txtdinheiro.Text = "Dinheiro (R$):";
             // 
-            // textBox1
+            // textCartao
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(115, 209);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 46;
+            this.textCartao.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textCartao.Location = new System.Drawing.Point(115, 209);
+            this.textCartao.Name = "textCartao";
+            this.textCartao.Size = new System.Drawing.Size(135, 20);
+            this.textCartao.TabIndex = 46;
             // 
             // txtcartao
             // 
@@ -143,7 +146,8 @@
             this.btnfinalizar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnfinalizar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnfinalizar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btnfinalizar.Location = new System.Drawing.Point(12, 400);
+            this.btnfinalizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnfinalizar.Location = new System.Drawing.Point(12, 511);
             this.btnfinalizar.Name = "btnfinalizar";
             this.btnfinalizar.Size = new System.Drawing.Size(314, 38);
             this.btnfinalizar.TabIndex = 51;
@@ -170,11 +174,31 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "Troco:";
             // 
+            // Obs
+            // 
+            this.Obs.Controls.Add(this.txtobs);
+            this.Obs.Location = new System.Drawing.Point(13, 369);
+            this.Obs.Name = "Obs";
+            this.Obs.Size = new System.Drawing.Size(313, 136);
+            this.Obs.TabIndex = 54;
+            this.Obs.TabStop = false;
+            this.Obs.Text = "Observações";
+            // 
+            // txtobs
+            // 
+            this.txtobs.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtobs.Location = new System.Drawing.Point(6, 18);
+            this.txtobs.Multiline = true;
+            this.txtobs.Name = "txtobs";
+            this.txtobs.Size = new System.Drawing.Size(301, 112);
+            this.txtobs.TabIndex = 45;
+            // 
             // FrmPagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 450);
+            this.ClientSize = new System.Drawing.Size(338, 561);
+            this.Controls.Add(this.Obs);
             this.Controls.Add(this.txttroco);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnfinalizar);
@@ -182,15 +206,18 @@
             this.Controls.Add(this.txttotal);
             this.Controls.Add(this.textpix);
             this.Controls.Add(this.txtpix);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textCartao);
             this.Controls.Add(this.txtcartao);
-            this.Controls.Add(this.txtpreco);
+            this.Controls.Add(this.textdinheiro);
             this.Controls.Add(this.txtdinheiro);
             this.Controls.Add(this.panel1);
             this.Name = "FrmPagamentos";
             this.Text = "Pagamentos";
+            this.Load += new System.EventHandler(this.FrmPagamentos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Obs.ResumeLayout(false);
+            this.Obs.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,9 +227,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtpreco;
+        private System.Windows.Forms.TextBox textdinheiro;
         private System.Windows.Forms.Label txtdinheiro;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textCartao;
         private System.Windows.Forms.Label txtcartao;
         private System.Windows.Forms.TextBox textpix;
         private System.Windows.Forms.Label txtpix;
@@ -211,5 +238,7 @@
         private System.Windows.Forms.TextBox txttroco;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox texttotal;
+        private System.Windows.Forms.GroupBox Obs;
+        private System.Windows.Forms.TextBox txtobs;
     }
 }
