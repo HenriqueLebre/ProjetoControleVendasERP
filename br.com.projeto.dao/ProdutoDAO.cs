@@ -304,5 +304,74 @@ namespace ProjetoControleVendas.br.com.projeto.dao
         }
 
         #endregion
+
+        #region BaixaEstoque
+
+        public void BaixaEstoque(int idproduto, int qtdestoque)
+        {
+            try
+            {
+
+                string cCmdSql = "UPDATE tb_produtos SET qtd_estoque = @qtd WHERE id = @id;";
+
+                MySqlCommand execcmd = new MySqlCommand(cCmdSql, conn);
+
+                execcmd.Parameters.AddWithValue("@qtd", qtdestoque);
+                execcmd.Parameters.AddWithValue("@id", idproduto);
+
+                conn.Open();
+
+                execcmd.ExecuteNonQuery();
+
+                conn.Close();
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Obtivemos um erro, valide as infomações: " + erro);
+                conn.Close();
+            }
+        }
+
+        #endregion
+
+        #region RetornaEstoqueAtualPrd
+
+        public int RetornaEstoqueAtualPrd(int idproduto)
+        {
+            try
+            {
+
+                string cCmdSql = @"SELECT qtd_estoque FROM tb_produtos WHERE id=@id";
+                int qtd_estoque = 0;
+
+                MySqlCommand execcmd = new MySqlCommand(cCmdSql, conn);
+
+                execcmd.Parameters.AddWithValue("@id", idproduto);
+
+                conn.Open();
+
+                MySqlDataReader rs = execcmd.ExecuteReader();
+
+                if(rs.Read())
+                {
+                    qtd_estoque = rs.GetInt32("qtd_estoque");
+
+                    conn.Close();
+                }
+
+                return qtd_estoque;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Obtivemos um erro, valide as informações: " + erro);
+                return 0;
+            }
+        }
+
+        #endregion
     }
 }
