@@ -276,16 +276,19 @@ namespace ProjetoControleVendas.br.com.projeto.dao
                     obj.nome    = rs.GetString("nome");
                     obj.cep     = rs.GetString("cep");
                     obj.cidade  = rs.GetString("cidade");
-                    obj.estado  = rs.GetString("uf");
+                    obj.estado  = rs.GetString("estado");
 
                     conn.Close();
 
-
                     return obj;
-                
+
+                }
+                else
+                {
+                    return null;
+
                 }
 
-                return null;
 
             }
             catch (Exception erro)

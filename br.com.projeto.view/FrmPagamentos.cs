@@ -91,6 +91,10 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
                     MessageBox.Show("Venda realizada com sucesso!");
 
+                    this.Dispose();
+
+                    new FrmVendas().ShowDialog();
+
                 }
 
 

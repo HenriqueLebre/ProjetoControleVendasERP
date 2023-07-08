@@ -47,10 +47,24 @@ namespace ProjetoControleVendas.br.com.projeto.view
             {
                 cliente = cDAO.RetornaClientePorCpf(txtcpf.Text);
                 
-                txtnome.Text = cliente.nome;
-                //txtcep.Text = cliente.cep;
-                //txtcidade.Text = cliente.cidade;
-                //cbuf.Text = cliente.estado;
+                if(cliente != null) 
+                {
+                    txtnome.Text = cliente.nome;
+                    txtcep.Text = cliente.cep;
+                    txtcidade.Text = cliente.cidade;
+                    cbuf.Text = cliente.estado;
+                }
+                else
+                {
+                    txtcpf.Clear();
+                    txtnome.Clear();
+                    txtcep.Clear();
+                    txtcidade.Clear();
+                    cbuf.Text = "";
+
+                    txtcpf.Focus();
+
+                }
 
             }
         }
@@ -61,9 +75,23 @@ namespace ProjetoControleVendas.br.com.projeto.view
             {
                 p = pdao.RetornaProdutoPorCod(int.Parse(txtcodigo.Text));
 
-                txtdesc.Text = p.descricao;
-                txtpreco.Text = p.preco.ToString();
-                txtqtd.Text = p.qtd_estoque.ToString();
+                if(p != null)
+                {
+                    txtdesc.Text = p.descricao;
+                    txtpreco.Text = p.preco.ToString();
+                    txtqtd.Text = p.qtd_estoque.ToString();
+
+                }
+                else
+                {
+                    txtdesc.Clear();
+                    txtpreco.Clear();
+                    txtqtd.Clear();
+
+                    txtcodigo.Focus();
+
+                }
+
 
             }
         }
