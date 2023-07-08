@@ -60,7 +60,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnpgto = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtdata = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -421,13 +421,13 @@
             this.btnpgto.UseVisualStyleBackColor = false;
             this.btnpgto.Click += new System.EventHandler(this.btnpgto_Click);
             // 
-            // textBox1
+            // txtdata
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(153, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(107, 20);
-            this.textBox1.TabIndex = 40;
+            this.txtdata.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtdata.Location = new System.Drawing.Point(153, 157);
+            this.txtdata.Name = "txtdata";
+            this.txtdata.Size = new System.Drawing.Size(107, 20);
+            this.txtdata.TabIndex = 40;
             // 
             // label10
             // 
@@ -445,7 +445,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 530);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtdata);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnpgto);
@@ -505,7 +505,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnpgto;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtdata;
         private System.Windows.Forms.Label label10;
     }
 }

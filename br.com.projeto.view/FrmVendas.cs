@@ -116,13 +116,15 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
             total.Text = totalDeCompras.ToString();
 
-            MessageBox.Show("Produto removido do carrinho!")
+            MessageBox.Show("Produto removido do carrinho!");
 
         }
 
         private void btnpgto_Click(object sender, EventArgs e)
         {
-            FrmPagamentos tela = new FrmPagamentos(cliente, carrinho);
+            DateTime dataatual = DateTime.Parse(txtdata.Text);
+
+            FrmPagamentos tela = new FrmPagamentos(cliente, carrinho, dataatual);
 
             tela.texttotal.Text = total.ToString();
 
@@ -131,7 +133,7 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
         private void FrmVendas_Load(object sender, EventArgs e)
         {
-
+            txtdata.Text = DateTime.Now.ToShortDateString();
 
 
         }
