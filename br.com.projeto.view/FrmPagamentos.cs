@@ -36,6 +36,10 @@ namespace ProjetoControleVendas.br.com.projeto.view
             {
                 decimal v_dinheiro, v_cartao, v_pix, v_troco, totalpago, total;
 
+                ProdutoDAO dao_produto = new ProdutoDAO();
+
+                int qtd_estoque, qtd_comprada, estoque_atualizada;
+
                 v_dinheiro = decimal.Parse(textdinheiro.Text);
                 v_cartao = decimal.Parse(textCartao.Text);
                 v_pix = decimal.Parse(textpix.Text);
@@ -76,6 +80,16 @@ namespace ProjetoControleVendas.br.com.projeto.view
                         item.produto_id = int.Parse(linha["Código"].ToString());
                         item.qtd        = int.Parse(linha["Qtd"].ToString());
                         item.subtotal   = decimal.Parse(linha["Subtotal"].ToString());
+
+                        qtd_estoque = dao_produto.RetornaEstoqueAtualPrd(item.produto_id);
+
+                        qtd_comprada = item.qtd;
+
+                        estoque_atualizada = qtd_estoque - qtd_comprada;
+
+                        dao_produto.BaixaEstoque(item.produto_id, estoque_atualizada);
+
+
 
                         ItemVendaDAO itemDAO = new ItemVendaDAO();
                         itemDAO.CadastraItemVenda(item);
