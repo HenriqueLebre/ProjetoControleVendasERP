@@ -118,6 +118,12 @@
     <Compile Include="br.com.projeto.view\FrmFuncionarios.Designer.cs">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.projeto.view\FrmHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmHistorico.Designer.cs">
+      <DependentUpon>FrmHistorico.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.view\FrmPagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.view\FrmHistorico.resx">
+      <DependentUpon>FrmHistorico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmPagamentos.resx">
       <DependentUpon>FrmPagamentos.cs</DependentUpon>

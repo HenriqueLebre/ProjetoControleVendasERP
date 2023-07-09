@@ -43,7 +43,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnrmvitem = new System.Windows.Forms.Button();
-            this.btnadditem = new System.Windows.Forms.Button();
             this.txtqtd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.btnpgto = new System.Windows.Forms.Button();
             this.txtdata = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnadditem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -250,19 +250,6 @@
             this.btnrmvitem.UseVisualStyleBackColor = false;
             this.btnrmvitem.Click += new System.EventHandler(this.btnrmvitem_Click);
             // 
-            // btnadditem
-            // 
-            this.btnadditem.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnadditem.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnadditem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btnadditem.Location = new System.Drawing.Point(244, 79);
-            this.btnadditem.Name = "btnadditem";
-            this.btnadditem.Size = new System.Drawing.Size(124, 30);
-            this.btnadditem.TabIndex = 30;
-            this.btnadditem.Text = "Adcionar Item";
-            this.btnadditem.UseVisualStyleBackColor = false;
-            this.btnadditem.Click += new System.EventHandler(this.btnadditem_Click);
-            // 
             // txtqtd
             // 
             this.txtqtd.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -440,6 +427,19 @@
             this.label10.TabIndex = 39;
             this.label10.Text = "Data:";
             // 
+            // btnadditem
+            // 
+            this.btnadditem.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnadditem.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnadditem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnadditem.Location = new System.Drawing.Point(244, 79);
+            this.btnadditem.Name = "btnadditem";
+            this.btnadditem.Size = new System.Drawing.Size(124, 30);
+            this.btnadditem.TabIndex = 30;
+            this.btnadditem.Text = "Adcionar Item";
+            this.btnadditem.UseVisualStyleBackColor = false;
+            this.btnadditem.Click += new System.EventHandler(this.btnadditem_Click);
+            // 
             // FrmVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,7 +495,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtdesc;
-        private System.Windows.Forms.Button btnadditem;
         private System.Windows.Forms.Button btnrmvitem;
         private System.Windows.Forms.DataGridView Produtos;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -507,5 +506,6 @@
         private System.Windows.Forms.Button btnpgto;
         private System.Windows.Forms.TextBox txtdata;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnadditem;
     }
 }
