@@ -136,5 +136,42 @@ namespace ProjetoControleVendas.br.com.projeto.dao
         }
 
         #endregion
+
+        #region Listar Todas as Vendas
+
+        public DataTable listarVendas()
+        {
+            try
+            {
+
+                DataTable tabelaHistorico = new DataTable();
+
+                string cCmdSql = @"SELECT v.id, v.data_venda, c.nome, v.total_venda, v.observacoes FROM
+                                   tb_vendas as v
+                                   JOIN tb_clientes as c on (v.cliente = c.id)";
+
+                MySqlCommand execcmd = new MySqlCommand(cCmdSql, conn);
+
+                conn.Open();
+                execcmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(execcmd);
+                da.Fill(tabelaHistorico);
+
+                conn.Close();
+
+                return tabelaHistorico;
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Impossível listas as vendas, favor validar as informações: " + erro);
+            }
+        }
+
+        #endregion
+
     }
 }

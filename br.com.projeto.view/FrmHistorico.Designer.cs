@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtinicio = new System.Windows.Forms.DateTimePicker();
-            this.dtfim = new System.Windows.Forms.DateTimePicker();
-            this.dthistorico = new System.Windows.Forms.DataGridView();
             this.btpesquisar = new System.Windows.Forms.Button();
+            this.dtfim = new System.Windows.Forms.DateTimePicker();
+            this.dtinicio = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dthistorico = new System.Windows.Forms.DataGridView();
             this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,16 +82,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
             // 
-            // label3
+            // btpesquisar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(6, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 18);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Data Inicio:";
+            this.btpesquisar.BackColor = System.Drawing.Color.YellowGreen;
+            this.btpesquisar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btpesquisar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btpesquisar.Location = new System.Drawing.Point(527, 45);
+            this.btpesquisar.Name = "btpesquisar";
+            this.btpesquisar.Size = new System.Drawing.Size(124, 30);
+            this.btpesquisar.TabIndex = 31;
+            this.btpesquisar.Text = "Pesquisar";
+            this.btpesquisar.UseVisualStyleBackColor = false;
+            this.btpesquisar.Click += new System.EventHandler(this.btpesquisar_Click);
+            // 
+            // dtfim
+            // 
+            this.dtfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dtfim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtfim.Location = new System.Drawing.Point(321, 22);
+            this.dtfim.Name = "dtfim";
+            this.dtfim.Size = new System.Drawing.Size(118, 24);
+            this.dtfim.TabIndex = 20;
+            // 
+            // dtinicio
+            // 
+            this.dtinicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dtinicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtinicio.Location = new System.Drawing.Point(93, 23);
+            this.dtinicio.Name = "dtinicio";
+            this.dtinicio.Size = new System.Drawing.Size(111, 24);
+            this.dtinicio.TabIndex = 19;
             // 
             // label2
             // 
@@ -104,23 +124,16 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Data Fim:";
             // 
-            // dtinicio
+            // label3
             // 
-            this.dtinicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dtinicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtinicio.Location = new System.Drawing.Point(93, 23);
-            this.dtinicio.Name = "dtinicio";
-            this.dtinicio.Size = new System.Drawing.Size(111, 24);
-            this.dtinicio.TabIndex = 19;
-            // 
-            // dtfim
-            // 
-            this.dtfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dtfim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtfim.Location = new System.Drawing.Point(321, 22);
-            this.dtfim.Name = "dtfim";
-            this.dtfim.Size = new System.Drawing.Size(118, 24);
-            this.dtfim.TabIndex = 20;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(6, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Data Inicio:";
             // 
             // dthistorico
             // 
@@ -135,18 +148,6 @@
             this.dthistorico.Name = "dthistorico";
             this.dthistorico.Size = new System.Drawing.Size(694, 176);
             this.dthistorico.TabIndex = 5;
-            // 
-            // btpesquisar
-            // 
-            this.btpesquisar.BackColor = System.Drawing.Color.YellowGreen;
-            this.btpesquisar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btpesquisar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btpesquisar.Location = new System.Drawing.Point(527, 45);
-            this.btpesquisar.Name = "btpesquisar";
-            this.btpesquisar.Size = new System.Drawing.Size(124, 30);
-            this.btpesquisar.TabIndex = 31;
-            this.btpesquisar.Text = "Pesquisar";
-            this.btpesquisar.UseVisualStyleBackColor = false;
             // 
             // colCod
             // 
@@ -186,6 +187,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmHistorico";
             this.Text = "Histórico de Vendas";
+            this.Load += new System.EventHandler(this.FrmHistorico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
