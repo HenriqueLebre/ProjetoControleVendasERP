@@ -3,6 +3,7 @@ using ProjetoControleVendas.br.com.projeto.conexao;
 using ProjetoControleVendas.br.com.projeto.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,7 +94,46 @@ namespace ProjetoControleVendas.br.com.projeto.dao
         #endregion
 
 
-        #region 
+
+        #region listaVendasPorPeriodo
+
+        public DataTable listaVendasPorPeriodo(DateTime datainicio, DateTime datafim)
+        {
+            try
+            {
+
+                DataTable tabelaHistorico = new DataTable();
+
+                string cCmdSql = @"SELECT 
+                                       v.id                 as 'Código',
+                                       v.data_venda         as 'Data da Venda',
+                                       c.nome               as 'Cliente',
+                                       v.total_venda        as 'Total',
+                                       v.observacoes        as 'Obs'
+                                  FROM tb_vendas as v join tb_clientes as c on (v.cliente_id = c.id)
+                                  WHERE v.data_venda BETWEEN @dataincio and @datafim";
+
+                MySqlCommand execcmd = new MySqlCommand(@cCmdSql, conn);
+
+                execcmd.Parameters.AddWithValue("@datainicio", datainicio);
+                execcmd.Parameters.AddWithValue("@datafim"   , datafim);
+
+                conn.Open();
+                execcmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(execcmd);
+                da.Fill(tabelaHistorico);
+
+                return tabelaHistorico;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao lista Vendas, valide as informações: " + erro);
+                return null;
+            }
+        }
 
         #endregion
     }
