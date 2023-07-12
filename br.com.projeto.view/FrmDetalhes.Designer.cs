@@ -82,6 +82,7 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da Venda";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtobs
             // 
@@ -181,6 +182,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmDetalhes";
             this.Text = "Detalhes de Vendas";
+            this.Load += new System.EventHandler(this.FrmDetalhes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

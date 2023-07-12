@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoControleVendas.br.com.projeto.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,31 @@ namespace ProjetoControleVendas.br.com.projeto.view
 {
     public partial class FrmDetalhes : Form
     {
-        public FrmDetalhes()
+        int venda_id;
+
+        public FrmDetalhes(int idvenda)
         {
+            venda_id = idvenda;
             InitializeComponent();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmDetalhes_Load(object sender, EventArgs e)
+        {
+            ItemVendaDAO dao = new ItemVendaDAO();
+
+            tabeladetalhes.DataSource = dao.ListaItemPorVenda(venda_id);
+
+
 
         }
     }

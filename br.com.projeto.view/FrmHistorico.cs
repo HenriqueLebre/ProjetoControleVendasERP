@@ -45,8 +45,8 @@ namespace ProjetoControleVendas.br.com.projeto.view
 
         private void dthistorico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            FrmDetalhes tela = new FrmDetalhes();
+            int idvenda = int.Parse(dthistorico.CurrentRow.Cells[0].Value.ToString());
+            FrmDetalhes tela = new FrmDetalhes( idvenda );
 
             DateTime dataVenda = Convert.ToDateTime(dthistorico.CurrentRow.Cells[1].Value.ToString());
 

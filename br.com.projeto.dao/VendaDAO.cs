@@ -168,6 +168,7 @@ namespace ProjetoControleVendas.br.com.projeto.dao
             {
 
                 MessageBox.Show("Impossível listas as vendas, favor validar as informações: " + erro);
+                return null;
             }
         }
 
