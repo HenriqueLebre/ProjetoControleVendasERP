@@ -31,14 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtcliente = new System.Windows.Forms.TextBox();
-            this.txtdata = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txttotal = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtobs = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txttotal = new System.Windows.Forms.TextBox();
+            this.txtdata = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtcliente = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabeladetalhes = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,63 +83,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da Venda";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(6, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 18);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Cliente:";
-            // 
-            // txtcliente
-            // 
-            this.txtcliente.Location = new System.Drawing.Point(69, 23);
-            this.txtcliente.Name = "txtcliente";
-            this.txtcliente.ReadOnly = true;
-            this.txtcliente.Size = new System.Drawing.Size(262, 20);
-            this.txtcliente.TabIndex = 19;
-            // 
-            // txtdata
-            // 
-            this.txtdata.Location = new System.Drawing.Point(69, 54);
-            this.txtdata.Name = "txtdata";
-            this.txtdata.ReadOnly = true;
-            this.txtdata.Size = new System.Drawing.Size(262, 20);
-            this.txtdata.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(6, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Data:";
-            // 
-            // txttotal
-            // 
-            this.txttotal.Location = new System.Drawing.Point(427, 23);
-            this.txttotal.Name = "txttotal";
-            this.txttotal.ReadOnly = true;
-            this.txttotal.Size = new System.Drawing.Size(262, 20);
-            this.txttotal.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(364, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 18);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Total:";
-            // 
             // txtobs
             // 
             this.txtobs.Location = new System.Drawing.Point(69, 84);
@@ -159,6 +102,63 @@
             this.label5.Size = new System.Drawing.Size(40, 18);
             this.label5.TabIndex = 24;
             this.label5.Text = "Obs:";
+            // 
+            // txttotal
+            // 
+            this.txttotal.Location = new System.Drawing.Point(427, 23);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
+            this.txttotal.Size = new System.Drawing.Size(262, 20);
+            this.txttotal.TabIndex = 23;
+            // 
+            // txtdata
+            // 
+            this.txtdata.Location = new System.Drawing.Point(69, 54);
+            this.txtdata.Name = "txtdata";
+            this.txtdata.ReadOnly = true;
+            this.txtdata.Size = new System.Drawing.Size(262, 20);
+            this.txtdata.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(364, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 18);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Total:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(6, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Data:";
+            // 
+            // txtcliente
+            // 
+            this.txtcliente.Location = new System.Drawing.Point(69, 23);
+            this.txtcliente.Name = "txtcliente";
+            this.txtcliente.ReadOnly = true;
+            this.txtcliente.Size = new System.Drawing.Size(262, 20);
+            this.txtcliente.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(6, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 18);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Cliente:";
             // 
             // tabeladetalhes
             // 
@@ -195,14 +195,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtcliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtobs;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txttotal;
-        private System.Windows.Forms.TextBox txtdata;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView tabeladetalhes;
+        public System.Windows.Forms.TextBox txtcliente;
+        public System.Windows.Forms.TextBox txtobs;
+        public System.Windows.Forms.TextBox txttotal;
+        public System.Windows.Forms.TextBox txtdata;
     }
 }

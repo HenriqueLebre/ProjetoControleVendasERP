@@ -42,5 +42,21 @@ namespace ProjetoControleVendas.br.com.projeto.view
             dthistorico.DefaultCellStyle.ForeColor = Color.Black;
 
         }
+
+        private void dthistorico_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            FrmDetalhes tela = new FrmDetalhes();
+
+            DateTime dataVenda = Convert.ToDateTime(dthistorico.CurrentRow.Cells[1].Value.ToString());
+
+            tela.txtdata.Text       = dataVenda.ToString("dd/MM/yyyy");
+            tela.txtcliente.Text    = dthistorico.CurrentRow.Cells[2].Value.ToString();
+            tela.txttotal.Text      = dthistorico.CurrentRow.Cells[3].Value.ToString();
+            tela.txtobs.Text        = dthistorico.CurrentRow.Cells[4].Value.ToString();
+
+            tela.ShowDialog();
+
+        }
     }
 }

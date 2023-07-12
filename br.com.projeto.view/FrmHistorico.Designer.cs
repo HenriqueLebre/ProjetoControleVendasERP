@@ -148,6 +148,7 @@
             this.dthistorico.Name = "dthistorico";
             this.dthistorico.Size = new System.Drawing.Size(694, 176);
             this.dthistorico.TabIndex = 5;
+            this.dthistorico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dthistorico_CellClick);
             // 
             // colCod
             // 
