@@ -136,6 +136,12 @@
     <Compile Include="br.com.projeto.view\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.projeto.view\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.view\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.view\FrmPagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="br.com.projeto.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.view\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.view\FrmPagamentos.resx">
       <DependentUpon>FrmPagamentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +206,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -212,6 +222,50 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\configuracoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entregador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracoes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entregador1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lebre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lebre-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafico-preditivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lebre-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -265,5 +265,49 @@ namespace ProjetoControleVendas.br.com.projeto.dao
         }
 
         #endregion
+
+        #region EfetuaLogin
+
+        public bool EfetuaLogin(string email, string senha)
+        {
+            try
+            {
+
+                string cCmdSql = @"SELECT * fFROM tb_funcionarios
+                                        WHERE email = '@email' AND senha = '@senha'";
+
+                // Conexão
+                MySqlCommand execcmd = new MySqlCommand(cCmdSql, conn);
+
+                execcmd.Parameters.AddWithValue("@email", email);
+                execcmd.Parameters.AddWithValue("@senha", senha);
+
+                conn.Open();
+
+                MySqlDataReader reader = execcmd.ExecuteReader();
+
+                if(reader.Read())
+                {
+                    MessageBox.Show("Login realizado com sucesso!");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Senha ou e-mail incorreto!");
+                    return false;
+                }
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Obtivemos um erro ao acessar, valide as informações: " + erro);
+                return false;
+            }
+        }
+
+        #endregion
+
+
     }
 }

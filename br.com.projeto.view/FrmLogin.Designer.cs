@@ -113,6 +113,7 @@
             this.btnentrar.TabIndex = 32;
             this.btnentrar.Text = "Acessar";
             this.btnentrar.UseVisualStyleBackColor = false;
+            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
             // 
             // btnesquecisenha
             // 
