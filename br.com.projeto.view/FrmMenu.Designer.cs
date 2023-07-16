@@ -91,12 +91,14 @@
             this.cadastroDeClientesToolStripMenuItem.Name = "cadastroDeClientesToolStripMenuItem";
             this.cadastroDeClientesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.cadastroDeClientesToolStripMenuItem.Text = "Cadastro de Clientes";
+            this.cadastroDeClientesToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeClientesToolStripMenuItem_Click);
             // 
             // consultaDeClientesToolStripMenuItem
             // 
             this.consultaDeClientesToolStripMenuItem.Name = "consultaDeClientesToolStripMenuItem";
             this.consultaDeClientesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.consultaDeClientesToolStripMenuItem.Text = "Consulta de Clientes";
+            this.consultaDeClientesToolStripMenuItem.Click += new System.EventHandler(this.consultaDeClientesToolStripMenuItem_Click);
             // 
             // MenuFuncionarios
             // 

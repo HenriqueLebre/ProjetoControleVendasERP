@@ -31,5 +31,20 @@ namespace ProjetoControleVendas.br.com.projeto.view
         {
             horaatual.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void cadastroDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes tela = new FrmClientes();
+            
+            tela.ShowDialog();
+        }
+
+        private void consultaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes tela = new FrmClientes();
+            tela.tabPage1.SelectedTab = tela.tabPage2;
+
+            tela.ShowDialog();
+        }
     }
 }
