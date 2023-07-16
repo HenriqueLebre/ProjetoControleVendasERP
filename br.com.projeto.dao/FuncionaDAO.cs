@@ -290,12 +290,15 @@ namespace ProjetoControleVendas.br.com.projeto.dao
                 if (reader.Read())
                 {
 
-                    string nivel = reader.GetString("nivel_acesso");
+                    string nivel    = reader.GetString("nivel_acesso");
+                    string nome     = reader.GetString("nome");
 
                     MessageBox.Show(@"Login realizado com sucesso! 
-                        Nivel de acesso: " + nivel);
+                                      Nivel de acesso: " + nivel);
 
                     FrmMenu telaMenu = new FrmMenu();
+
+                    telaMenu.txtusuario.Text = nome;
 
                     if (nivel.Equals("Administrador"))
                     {
