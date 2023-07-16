@@ -176,13 +176,13 @@
             // novaVendaToolStripMenuItem
             // 
             this.novaVendaToolStripMenuItem.Name = "novaVendaToolStripMenuItem";
-            this.novaVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novaVendaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.novaVendaToolStripMenuItem.Text = "Nova venda";
             // 
             // históricoDeVendasToolStripMenuItem
             // 
             this.históricoDeVendasToolStripMenuItem.Name = "históricoDeVendasToolStripMenuItem";
-            this.históricoDeVendasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.históricoDeVendasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.históricoDeVendasToolStripMenuItem.Text = "Histórico de vendas";
             // 
             // configuraçõesToolStripMenuItem
@@ -291,12 +291,10 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuFuncionarios;
-        private System.Windows.Forms.ToolStripMenuItem cadastroDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuFornecedores;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeFornecedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeFornecedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem MenuProdutos;
         private System.Windows.Forms.ToolStripMenuItem consultaDeProdutosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeProdutosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem MenuVendas;
@@ -312,5 +310,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        public System.Windows.Forms.ToolStripMenuItem MenuProdutos;
+        public System.Windows.Forms.ToolStripMenuItem cadastroDeFuncionáriosToolStripMenuItem;
     }
 }

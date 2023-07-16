@@ -28,9 +28,6 @@ namespace ProjetoControleVendas.br.com.projeto.view
             if(dao.EfetuaLogin(email, senha) == true) 
             {
 
-                FrmMenu telaMenu = new FrmMenu();
-                telaMenu.Show();
-
                 this.Hide();
 
             }
