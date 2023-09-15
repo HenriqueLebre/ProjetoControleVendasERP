@@ -1,6 +1,6 @@
 # ProjetoControleVendasERP
 
-ProjetoControleVendasERP é um sistema de exemplo que demonstra como desenvolver um sistema de controle de vendas e estoque usando C# e ASP.NET.
+ProjetoControleVendasERP é um sistema de exemplo que demonstra como desenvolver um sistema de controle de vendas e estoque usando C#, ASP.NET e Windows Form.
 
 ## Descrição
 
@@ -35,8 +35,6 @@ Configure a conexão com o banco de dados no arquivo appsettings.json.
 
 Compile e execute o projeto.
 
-Acesse o sistema através do navegador da web.
-
 ### Funcionalidades
 O projeto inclui as seguintes funcionalidades principais:
 
@@ -54,7 +52,7 @@ Sinta-se à vontade para contribuir com melhorias para este projeto. Se você en
 
 # ProjetoControleVendasERP
 
-ProjetoControleVendasERP is a sample system that demonstrates how to develop a sales and inventory control system using C# and ASP.NET.
+ProjetoControleVendasERP is a sample system that demonstrates how to develop a sales and inventory control system using C# and ASP.NET and Windows Form.
 
 ## Description
 
@@ -88,8 +86,6 @@ Open the project in your preferred development environment.
 Configure the database connection in the appsettings.json file.
 
 Build and run the project.
-
-Access the system through a web browser.
 
 ### Features
 The project includes the following main features:
